@@ -10,6 +10,13 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
+            Menu menu = new Menu();
+
+            while (true)
+            {
+                menu.Render();
+                menu.HandleInput();
+            }
         }
     }
 }
