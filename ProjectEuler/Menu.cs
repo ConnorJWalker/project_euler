@@ -12,6 +12,7 @@ namespace ProjectEuler
         private ConsoleKey currentKey;
         private int currentSelectedIndex;
         private int max;
+        private Problems problems;
 
         public Menu()
         {
@@ -20,10 +21,11 @@ namespace ProjectEuler
             menuItems = new string[]
             {
                 "Problem 1 - Multiples of 3 and 5",
-                "Problem 2"
+                "Problem 2 - Even Fibonacci numbers"
             };
 
             max = menuItems.Length - 1;
+            problems = new Problems();
         }
 
         public void Render()
@@ -37,6 +39,8 @@ namespace ProjectEuler
                 Console.WriteLine(menuItems[i]);
                 Console.ResetColor();
             }
+
+            Console.WriteLine("\nPress ESC to exit");
         }
 
         public void HandleInput()
@@ -54,7 +58,19 @@ namespace ProjectEuler
                 case ConsoleKey.UpArrow:
                     currentSelectedIndex = currentSelectedIndex == 0 ? max : currentSelectedIndex - 1;
                     break;
+                case ConsoleKey.RightArrow:
+                case ConsoleKey.Enter:
+                    RunMenuItem();
+                    break;
             }
+        }
+
+        private void RunMenuItem()
+        {
+            Console.Clear();
+            problems.Methods[currentSelectedIndex].Invoke();
+            Console.WriteLine("\nPress Enter to return");
+            Console.ReadLine();
         }
     }
 }
