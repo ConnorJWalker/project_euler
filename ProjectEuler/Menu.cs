@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace ProjectEuler
 {
@@ -68,8 +65,15 @@ namespace ProjectEuler
         private void RunMenuItem()
         {
             Console.Clear();
+            Stopwatch watch = new Stopwatch();
+            watch.Start();
+
             problems.Methods[currentSelectedIndex].Invoke();
-            Console.WriteLine("\nPress Enter to return");
+
+            watch.Stop();
+
+            Console.WriteLine($"\nFunction ran in {watch.Elapsed}");
+            Console.WriteLine("Press Enter to return");
             Console.ReadLine();
         }
     }
