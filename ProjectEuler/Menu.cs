@@ -21,7 +21,8 @@ namespace ProjectEuler
                 "Problem 2 - Even Fibonacci Numbers",
                 "Problem 3 - Largest Prime Factor",
                 "Problem 4 - Largest Palidrome Product",
-                "Problem 5 - Smallest Multiple"
+                "Problem 5 - Smallest Multiple",
+                "Problem 6 - Sum Square Difference"
             };
 
             max = menuItems.Length - 1;
