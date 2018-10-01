@@ -18,7 +18,8 @@ namespace ProjectEuler
             menuItems = new string[]
             {
                 "Problem 1 - Multiples of 3 and 5",
-                "Problem 2 - Even Fibonacci numbers"
+                "Problem 2 - Even Fibonacci numbers",
+                "Problem 3 - Largest Prime Factor"
             };
 
             max = menuItems.Length - 1;
@@ -68,7 +69,14 @@ namespace ProjectEuler
             Stopwatch watch = new Stopwatch();
             watch.Start();
 
-            problems.Methods[currentSelectedIndex].Invoke();
+            try
+            {
+                problems.Methods[currentSelectedIndex].Invoke();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Problem has not been implemented yet :(");
+            }
 
             watch.Stop();
 
