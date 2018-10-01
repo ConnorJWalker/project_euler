@@ -12,7 +12,8 @@ namespace ProjectEuler
             Methods = new List<Action>()
             {
                 () => Problem1(),
-                () => Problem2()
+                () => Problem2(),
+                () => Problem3()
             };
         }
     }
