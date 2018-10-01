@@ -17,16 +17,5 @@ namespace ProjectEuler
 
             Console.WriteLine(largestPrimeFactor);
         }
-
-        private bool IsPrime(int number)
-        {
-            for (int i = 2; i < number; i++)
-            {
-                if (number % i == 0)
-                    return false;
-            }
-
-            return true;
-        }
     }
 }
