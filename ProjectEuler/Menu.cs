@@ -22,7 +22,8 @@ namespace ProjectEuler
                 "Problem 3 - Largest Prime Factor",
                 "Problem 4 - Largest Palidrome Product",
                 "Problem 5 - Smallest Multiple",
-                "Problem 6 - Sum Square Difference"
+                "Problem 6 - Sum Square Difference",
+                "Problem 7 - 10001st Prime Number"
             };
 
             max = menuItems.Length - 1;
