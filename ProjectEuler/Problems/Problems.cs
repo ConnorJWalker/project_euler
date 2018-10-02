@@ -6,6 +6,7 @@ namespace ProjectEuler
     public partial class Problems
     {
         public List<Action> Methods;
+        private FileReader fileReader;
 
         public Problems()
         {
@@ -17,8 +18,11 @@ namespace ProjectEuler
                 () => Problem4(),
                 () => Problem5(),
                 () => Problem6(),
-                () => Problem7()
+                () => Problem7(),
+                () => Problem8()
             };
+
+            fileReader = new FileReader();
         }
 
         private bool IsPrime(int number)
