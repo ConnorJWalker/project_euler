@@ -24,7 +24,9 @@ namespace ProjectEuler
                 "Problem 5 - Smallest Multiple",
                 "Problem 6 - Sum Square Difference",
                 "Problem 7 - 10001st Prime Number",
-                "Problem 8 - Largest Product in a Series"
+                "Problem 8 - Largest Product in a Series",
+                "Problem 9 - Special Pythagrean Triplet",
+                "Problem 10 - Summation of Primes"
             };
 
             max = menuItems.Length - 1;
